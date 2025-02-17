@@ -19,3 +19,19 @@ function getHumanChoice() {
     }
   }
 }
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log(`DRAW! Both players choose ${computerChoice}!`);
+  } else if (
+    (humanChoice === "rock" && computerChoice == "scissors") ||
+    (humanChoice === "scissors" && computerChoice === "paper") ||
+    (humanChoice === "paper" && computerChoice === "rock")
+  ) {
+    console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+    humanScore++;
+  } else {
+    console.log(`You lose! ${humanChoice} beats ${computerChoice}!`);
+    computerScore++;
+  }
+}
